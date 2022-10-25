@@ -6,6 +6,7 @@ from datetime import datetime
 from tkinter import messagebox
 import sqlite3
 
+
 conn=sqlite3.connect('Pizza_delivery.db')
 c=conn.cursor()
 
@@ -67,6 +68,7 @@ def Order():
                   order.destroy()
 
       order=Tk()
+      order.title("Lovely's Pizza")
       global var
       var=IntVar()
       def sel():
@@ -164,6 +166,7 @@ def Cancel():
                         exit
             
       cancel=Tk()
+      cancel.title("Lovely's Pizza")
       
       label_a=Label(cancel,text="  ")
       label_a.grid(row=1)
@@ -244,6 +247,7 @@ def Track():
                   messagebox.showinfo("Track Order","Please enter a valid Order ID")
                   
       track=Tk()
+      track.title("Lovely's Pizza")
       
       label_a=Label(track,text="  ")
       label_a.grid(row=1)
@@ -280,6 +284,7 @@ def Track():
 def NewPizzaOrder():
       global orders,times
       new_orders=Tk()
+      new_orders.title("Lovely's Pizza")
       t= Text(new_orders,height=15,width=100)
       t.pack()
       s="\n                  RECENT ORDERS\n\nORDER NO    NAME     ADDRESS      TIME \n"
@@ -304,6 +309,7 @@ def CanceledOrder():
 
       global canceled,cancel_times
       canceled_orders=Tk()
+      canceled_orders.title("Lovely's Pizza")
 
       t=Text(canceled_orders,height=15,width=100)
       t.pack()
@@ -328,6 +334,7 @@ def CanceledOrder():
 
 def ServedOrder():
       served=Tk()
+      served.title("Lovely's Pizza")
       ser=[]
       t=Text(served,height=15,width=100)
       t.pack()
@@ -388,6 +395,7 @@ def ServedOrder():
       
 def PendingOrder():
       pending=Tk()
+      pending.title("Lovely's Pizza")
       pen=[]
       t=Text(pending,height=15,width=100)
       t.pack()
@@ -448,6 +456,7 @@ def PendingOrder():
       
 def Customer():
       cust_window=Tk()
+      cust_window.title("Lovely's Pizza")
 
       label_a=Label(cust_window,text="  ")
       label_a.grid(row=0)
@@ -483,6 +492,7 @@ def Customer():
 
 def Vendor():
       ven_window=Tk()
+      ven_window.title("Lovely's Pizza")
 
       label_a=Label(ven_window,text=" ")
       label_a.grid(row=0)
@@ -517,6 +527,8 @@ def Vendor():
       ven_window.mainloop()
 
 window=Tk()
+window.title("Lovely's Pizza")
+
 
 
 label_a=Label(window,text="    ")
