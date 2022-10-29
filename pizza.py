@@ -79,7 +79,7 @@ def Order():
             m=int(var.get())
             return
 
-      order_w=Label(order,text="Order Pizza",bg="black",fg="white")
+      order_w=Label(order,text="Order Pizza",bg="#76B200",fg="white")
       order_w.grid(row=0,column=2)
 
       label_a=Label(order,text="  ")
@@ -120,7 +120,7 @@ def Order():
       entermail=Entry(order,bd=3)
       entermail.grid(row=6,column=2)
 
-      order_now=Button(order,text="Order Now",bg="yellow",fg="blue",command=ordernow)
+      order_now=Button(order,text="Order Now",bg="#FF9800",fg="white",command=ordernow)
       order_now.grid(row=7,column=2)
 
       
@@ -174,7 +174,7 @@ def Cancel():
       label_a=Label(cancel,text="  ")
       label_a.grid(row=1)
 
-      c=Label(cancel,text="Cancel Order",bg="black",fg="white")
+      c=Label(cancel,text="Cancel Order",bg="#c6493c",fg="white")
       c.grid(row=2,column=2)
 
       label_a=Label(cancel,text="  ")
@@ -195,7 +195,7 @@ def Cancel():
       label_a=Label(cancel,text="  ")
       label_a.grid(row=6)
 
-      Cancel_now=Button(cancel,text="Cancel Now",bg="yellow",fg="Blue",command=cancel_now)
+      Cancel_now=Button(cancel,text="Cancel Now",bg="red",fg="white",command=cancel_now)
       Cancel_now.grid(row=7,column=2)
 
       label_a=Label(cancel,text="      ")
@@ -255,7 +255,7 @@ def Track():
       label_a=Label(track,text="  ")
       label_a.grid(row=1)
 
-      c=Label(track,text="Track Order",bg="black",fg="white")
+      c=Label(track,text="Track Order",bg="#6a58a3",fg="white")
       c.grid(row=2,column=2)
 
       label_a=Label(track,text="  ")
@@ -270,7 +270,7 @@ def Track():
       label_a=Label(track,text="  ")
       label_a.grid(row=5)
 
-      Track_now=Button(track,text="Track Now",bg="yellow",fg="Blue",command=track_now)
+      Track_now=Button(track,text="Track Now",bg="#39a2c6",fg="white",command=track_now)
       Track_now.grid(row=6,column=2)
 
       label_a=Label(track,text="      ")
@@ -467,7 +467,7 @@ def Customer():
       label_a=Label(cust_window,text="  ")
       label_a.grid(column=0)
 
-      label_0=Label(cust_window,text="Customer",fg="white",bg="#4081EC")
+      label_0=Label(cust_window,text="Customer",fg="white",bg="#ed5d73")
       label_0.grid(row=1,column=3)
 
       label_a=Label(cust_window,text="  ")
@@ -503,25 +503,25 @@ def Vendor():
       label_a=Label(ven_window,text=" ")
       label_a.grid(column=0)
       
-      label_1=Label(ven_window,text="Vendor",fg="white",bg="black")
+      label_1=Label(ven_window,text="Vendor",fg="black",bg="#ed5d73",height="2",width="10")
       label_1.grid(row=1,column=2)
 
       label_a=Label(ven_window,text=" ")
       label_a.grid(row=2)
       
-      button_4=Button(ven_window,text="New Pizza Order",bg="#ee9b4f",activebackground="#ea8223",relief="raised",height="6",width="20",command=NewPizzaOrder)
+      button_4=Button(ven_window,text="New Pizza Order",bg="#ee9b4f",activebackground="#ea8223",relief="raised",height="2",width="15",command=NewPizzaOrder)
       button_4.grid(row=3,column=1)
       
-      button_5=Button(ven_window,text="Canceled Order",bg="#ee9b4f",activebackground="#ea8223",relief="raised",height="6",width="20",command=CanceledOrder)
+      button_5=Button(ven_window,text="Canceled Order",bg="#ee9b4f",activebackground="#ea8223",relief="raised",height="2",width="15",command=CanceledOrder)
       button_5.grid(row=3,column=3)
 
       label_a=Label(ven_window,text=" ")
       label_a.grid(row=4)
 
-      button_6=Button(ven_window,text="Served Order",bg="#ee9b4f",activebackground="#ea8223",relief="raised",height="6",width="20",command=ServedOrder)
+      button_6=Button(ven_window,text="Served Order",bg="#ee9b4f",activebackground="#ea8223",relief="raised",height="2",width="15",command=ServedOrder)
       button_6.grid(row=5,column=1)
 
-      button_7=Button(ven_window,text="Pending Order",bg="#ee9b4f",activebackground="#ea8223",relief="raised",height="6",width="20",command=PendingOrder)
+      button_7=Button(ven_window,text="Pending Order",bg="#ee9b4f",activebackground="#ea8223",relief="raised",height="2",width="15",command=PendingOrder)
       button_7.grid(row=5,column=3)
 
       label_a=Label(ven_window,text="  ")
