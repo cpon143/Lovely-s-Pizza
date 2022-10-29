@@ -9,7 +9,10 @@ import sqlite3
 
 conn=sqlite3.connect('Pizza_delivery.db')
 c=conn.cursor()
-
+c.execute("DROP TABLE IF EXISTS Pizza")
+c.execute("DROP TABLE IF EXISTS Canceled_Pizza")
+c.execute("DROP TABLE IF EXISTS Served_Pizza")
+c.execute("DROP TABLE IF EXISTS Pending_Pizza")
 '''The following four comments needs to be executed before starting the first time implementation of the project
    because they are needed to create the tables once'''
 
@@ -20,10 +23,10 @@ c.execute("CREATE TABLE Pending_Pizza(Order_no int,Name text,Address text,type i
 
 '''These following four comments can be executed according to the need if in case we need to drop the existing tables'''
 
-# c.execute("Drop Table Pizza")
-# c.execute("Drop Table Canceled_Pizza")
-# c.execute("Drop table Served_Pizza")
-# c.execute("Drop table Pending_Pizza")
+c.execute("Drop Table Pizza")
+c.execute("Drop Table Canceled_Pizza")
+c.execute("Drop table Served_Pizza")
+c.execute("Drop table Pending_Pizza")
 
 
 
@@ -464,25 +467,25 @@ def Customer():
       label_a=Label(cust_window,text="  ")
       label_a.grid(column=0)
 
-      label_0=Label(cust_window,text="Customer",fg="white",bg="black")
+      label_0=Label(cust_window,text="Customer",fg="white",bg="#4081EC")
       label_0.grid(row=1,column=3)
 
       label_a=Label(cust_window,text="  ")
       label_a.grid(row=2)
 
-      button_1=Button(cust_window,text="Order Pizza",bg="light blue",relief="raised",height="5",width="10",command=Order)
+      button_1=Button(cust_window,text="Order Pizza",activebackground="#5e8e00",fg="white",activeforeground="white",bg="#76B200",relief="raised",height="2",width="15",command=Order)
       button_1.grid(row=3,column=1)
 
       label_a=Label(cust_window,text="  ")
       label_a.grid(column=2)
 
-      button_2=Button(cust_window,text="Cancel Order",bg="light blue",relief="raised",height="5",width="10",command=Cancel)
+      button_2=Button(cust_window,text="Cancel Order",activebackground="#b81c0b",fg="white",activeforeground="white",bg="#c6493c",relief="raised",height="2",width="15",command=Cancel)
       button_2.grid(row=3,column=3)
 
       label_a=Label(cust_window,text="  ")
       label_a.grid(column=4)
 
-      button_3=Button(cust_window,text="Track Order",bg="light blue",relief="raised",height="5",width="10",command=Track)
+      button_3=Button(cust_window,text="Track Order",activebackground="#452e8c",fg="white",activeforeground="white",bg="#6a58a3",relief="raised",height="2",width="15",command=Track)
       button_3.grid(row=3,column=5)
       
       label_a=Label(cust_window,text="  ")
@@ -506,19 +509,19 @@ def Vendor():
       label_a=Label(ven_window,text=" ")
       label_a.grid(row=2)
       
-      button_4=Button(ven_window,text="New Pizza Order",bg="light blue",relief="raised",height="6",width="20",command=NewPizzaOrder)
+      button_4=Button(ven_window,text="New Pizza Order",bg="#ee9b4f",activebackground="#ea8223",relief="raised",height="6",width="20",command=NewPizzaOrder)
       button_4.grid(row=3,column=1)
       
-      button_5=Button(ven_window,text="Canceled Order",bg="light blue",relief="raised",height="6",width="20",command=CanceledOrder)
+      button_5=Button(ven_window,text="Canceled Order",bg="#ee9b4f",activebackground="#ea8223",relief="raised",height="6",width="20",command=CanceledOrder)
       button_5.grid(row=3,column=3)
 
       label_a=Label(ven_window,text=" ")
       label_a.grid(row=4)
 
-      button_6=Button(ven_window,text="Served Order",bg="light blue",relief="raised",height="6",width="20",command=ServedOrder)
+      button_6=Button(ven_window,text="Served Order",bg="#ee9b4f",activebackground="#ea8223",relief="raised",height="6",width="20",command=ServedOrder)
       button_6.grid(row=5,column=1)
 
-      button_7=Button(ven_window,text="Pending Order",bg="light blue",relief="raised",height="6",width="20",command=PendingOrder)
+      button_7=Button(ven_window,text="Pending Order",bg="#ee9b4f",activebackground="#ea8223",relief="raised",height="6",width="20",command=PendingOrder)
       button_7.grid(row=5,column=3)
 
       label_a=Label(ven_window,text="  ")
@@ -534,13 +537,14 @@ window.title("Lovely's Pizza")
 label_a=Label(window,text="    ")
 label_a.grid(column=0)
 
-button_m1=Button(window,text=" Customer ",bg="light green",height="4",width="15",relief="raised",command=Customer)
+button_m1=Button(window,text=" Customer ",activebackground="#e51837",fg="white",activeforeground="white",bg="#ed5d73",height="2",width="15",relief="raised",command=Customer)
 button_m1.grid(row=1,column=1)
+
 
 label_a=Label(window,text="  ")
 label_a.grid(column=2)
 
-button_m2=Button(window,text=" Vendor ",bg="light green",height="4",width="15",relief="raised",command=Vendor)
+button_m2=Button(window,text=" Vendor ",activebackground="#e51837",fg="white",activeforeground="white",bg="#ed5d73",height="2",width="15",relief="raised",command=Vendor)
 button_m2.grid(row=1,column=3)
 
 label_a=Label(window,text="   ")
